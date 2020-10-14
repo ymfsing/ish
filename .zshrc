@@ -41,9 +41,6 @@ zinit snippet OMZ::lib/key-bindings.zsh
 zinit snippet OMZ::lib/theme-and-appearance.zsh
 zinit snippet OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh
 
-# forgit
-zinit light wfxr/forgit
-
 
 # alias
 # ll
