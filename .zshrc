@@ -63,24 +63,6 @@ alias cat='bat'
 alias zc='z -c'      # 严格匹配当前路径的子路径
 alias zz='z -i'      # 使用交互式选择模式
 alias zf='z -I'      # 使用 fzf 对多个结果进行选择
-# ss
-alias ssv='export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
-# brew
-alias brewup='brew update && brew upgrade && brew upgrade --cask && mas upgrade'
-alias brews='brew search'
-alias brewi='brew install'
-alias brewf='brew info'
-alias brewl='brew list'
-alias brewlc='brew list --cask'
-alias brewci='brew cask install'
-# brew bundle
-alias brewbb='brew bundle dump --describe --force --file="~/.brewfile"'
-alias brewbr='brew bundle --file="~/.brewfile"'
-# conda
-alias cdub='conda activate base && conda update conda && conda update --all'
-alias cdup='conda update --all'
-# cleanup
-alias cleanupa='pbcopy </dev/null && rm -r ~/.Trash/* && brew cleanup && trash-empty '
 # emacs
 alias emc='emacsclient'
 alias emt='emacs -Q -l ~/.emacs.d/init-test.el'
@@ -138,38 +120,9 @@ function elert() {
     emacs -batch -l ert -l $1 -f ert-run-tests-batch-and-exit
 }
 
-# npm
-# export
-function npmep() {
-    npm list --global --parseable --depth=0 | sed '1d' | awk '{gsub(/\/.*\//,"",$1); print}' > ~/.npmfile
-}
-
-# import
-function npmim() {
-    xargs npm install --global < ~/.npmfile
-}
-
 # config
 # bat
 export BAT_THEME="Solarized (dark)"
 
 # z.lua
 export _ZL_MATCH_MODE=1
-
-# llvm
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
