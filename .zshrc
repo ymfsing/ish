@@ -55,8 +55,6 @@ zinit light wfxr/forgit
 alias ll='ls -al'
 # cp
 alias cp='cp -i'
-# trash
-alias rm='trash-put'
 # bat
 alias cat='bat'
 # z.lua
