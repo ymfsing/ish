@@ -7,13 +7,6 @@
   (setq org-default-notes-file (concat org-directory "/inbox.org")))
 
 
-(use-package org-roam
-  :custom
-  (org-roam-directory "~/org/roam")
-  :config
-  (setq org-roam-db-gc-threhold most-positive-fixnum))
-
-
 (provide 'init-org)
 
 
