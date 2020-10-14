@@ -3,9 +3,7 @@
 
 
 (require 'package)
-(setq package-archives '(("gnu" . "https://mirrors.ustc.edu.cn/elpa/gnu/")
-                         ("melpa" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
-                         ("org" . "https://mirrors.ustc.edu.cn/elpa/org/")))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (unless (bound-and-true-p package--initialized) ; To avoid warnings in 27
   (setq package-enable-at-startup nil)          ; To prevent initializing twice
   (package-initialize))
