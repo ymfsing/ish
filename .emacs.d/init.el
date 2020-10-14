@@ -68,8 +68,6 @@
 ;; programming languages
 ;; lsp
 (require 'init-lsp)
-;; markdown, required multimarkdown(brew), grip(pip)
-(require 'init-markdown)
 ;; org
 (require 'init-org)
 ;; emacs lisp, required roswell(brew)

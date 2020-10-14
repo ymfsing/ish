@@ -8,8 +8,6 @@
 
 
 (use-package org-roam
-  :hook
-  (after-init . org-roam-mode)
   :custom
   (org-roam-directory "~/org/roam")
   :config
