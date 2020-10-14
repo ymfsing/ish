@@ -51,7 +51,7 @@
 (require 'init-benchmark)
 
 ;; core
-;; package manager,use straight
+;; package manager
 (require 'init-package)
 (require 'init-base)
 (require 'init-dired)
@@ -70,8 +70,6 @@
 (require 'init-lsp)
 ;; org
 (require 'init-org)
-;; emacs lisp, required roswell(brew)
-(require 'init-clisp)
 ;; c-c++
 (require 'init-cpp)
 ;; python
