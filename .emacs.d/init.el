@@ -56,8 +56,6 @@
 (require 'init-base)
 (require 'init-dired)
 (require 'init-edit)
-;; sis, require macism(brew tap laishulu/macism; brew install macism)
-(require 'init-input)
 (require 'init-ui)
 (require 'init-highlight)
 (require 'init-company)
@@ -76,14 +74,10 @@
 (require 'init-org)
 ;; emacs lisp, required roswell(brew)
 (require 'init-clisp)
-;; scheme
-(require 'init-scheme)
 ;; c-c++
 (require 'init-cpp)
 ;; python
 (require 'init-python)
-;; lua, required jdk
-(require 'init-lua)
 ;; web, such as html/js/css
 (require 'init-web)
 ;; yaml
